@@ -1,2 +1,2 @@
 #!/bin/bash
-awk '{print>sprintf("%sfile.%d",NR%2?"odd":"even",PROCINFO["pid"])}' filename
+cat -n | grep [13579][[:space:]] | tr -s ' ' | cut -f2

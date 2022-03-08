@@ -1,2 +1,2 @@
 #!/bin/bash
-awk 'NR % 2 {print} !(NR % 2) && /pattern/ {print}' file.fasta
+awk '{print>sprintf("%sfile.%d",NR%2?"odd":"even",PROCINFO["pid"])}' filename
